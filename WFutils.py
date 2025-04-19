@@ -9,7 +9,7 @@ try:
 except ImportError:
     import itertools
 
-
+pop = {'0':10}
 
 def flatten(listOfLists):
     "Flatten one level of nesting"
