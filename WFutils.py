@@ -14,7 +14,8 @@ def flatten(listOfLists):
     "Flatten one level of nesting"
     return chain.from_iterable(listOfLists)
 
-def get_mutation_count(pop, mu,N=sum(pop.values()),seq_length=1):
+def get_mutation_count(pop, mu,seq_length=1):
+    N=sum(pop.values())
     mean = mu * N * seq_length
     return np.random.poisson(mean)
 
