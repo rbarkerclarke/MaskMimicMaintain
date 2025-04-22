@@ -52,8 +52,8 @@ def mutation_step(pop,mu):
         mutation_event(pop)
 
 
-def get_fitness(awm, amw, s, frequencies,pop, generations=100,
- pop_size=sum(pop.values())):
+def get_fitness(awm, amw, s, frequencies,pop, generations=100):
+    pop_size=sum(pop.values())
     payoff=[[1, 1+awm], [1+s+amw, 1+s]]
     x = frequencies
     f = np.dot(payoff,x)
